@@ -14,6 +14,7 @@ var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+var db = require("../models");
 // Import routes and give the server access to them.
 require("./controllers/scraper_controller")(app);
 
